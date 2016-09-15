@@ -7,6 +7,7 @@ h1{
   color:#00004d;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2em;
+  font-weight: bold;
   margin-top: 0;
   text-align: center;
 }
@@ -16,6 +17,7 @@ h2{
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-size: 1em;
+  font-weight: lighter;
   margin-top: 0;
   text-align: center;
 }
@@ -25,6 +27,7 @@ p{
   font-family: Helvetica, "Times New Roman", serif;
   font-size: 0.8em;
   margin-top: 0;
+  font-weight: bold;
   text-align: center;
 }
 

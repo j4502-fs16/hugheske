@@ -17,8 +17,6 @@ body{
   font-size: 1.1em;
   display:block;
   padding:10px;
-  padding-bottom:5px;
-  padding-top:5px;
   color:#20304F;
   text-align:center;
   font-family: 'Josefin Slab', Times, serif;
@@ -84,45 +82,63 @@ body{
   width: 100%;
 }
 
-.main{
+.main, .aside{
   flex:1 100%;
-  padding-left:50px;
-  padding-right:50px;
-  text-align:center;
+  padding-left:10px;
 }
 
 img {
   border-style: none;
   width:90%;
   padding-bottom: 30px;
-  padding-right: 0px;
 }
 
-@media (min-width:750px){
+@media (min-width:800px){
   .main{
-    flex:1 auto;
+    flex:3 auto;
   }
 
-  .photo{
+  .header2{
     order:1;
   }
 
-  .about-me{
+  .photo{
     order:2;
+  }
+
+  .about-me{
+    order:3;
+  }
+
+  .header2{
+    font-size: 1.8em;
+    justify-content: center;
+    align-self: center;
   }
 
   .main{
     display:flex;
-    flex-flow:row;
-    margin-bottom: 10px;
-    padding-left:100px;
-    padding-right:100px;
+    flex-flow:row;}
+
+  .main{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-left:50px;
+    padding-right:50px;
+  }
+
+  .about-me{
+    font-size: .85em;
+    text-align:left;
+    justify-content: center;
+    align-self: center;
   }
 
   img{
     width:290px;
     padding-bottom: 0px;
-    padding-right:40px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
 }
@@ -141,8 +157,6 @@ img {
   font-size: 1.1em;
   display:block;
   padding:10px;
-  padding-bottom:5px;
-  padding-top:5px;
   color:#20304F;
   text-align:center;
   font-family: 'Josefin Slab', Times, serif;

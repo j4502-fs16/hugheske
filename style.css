@@ -276,6 +276,7 @@ video{
   .about-me{
     font-size: .85em;
     padding-left: 40px;
+    width:100%;
     text-align:left;
     justify-content: center;
     align-self: center;
@@ -298,14 +299,15 @@ video{
   background:#E8806E;
   padding:0;
   display:flex;
-  flex-flow:column;
+  flex-flow:row;
+  justify-content: center;
 }
 
 .footer-nav a{
   text-decoration:none;
   font-size: 1.1em;
   display:block;
-  padding:10px;
+  padding:10px 20px;
   color:#20304F;
   text-align:center;
   font-family: 'Josefin Slab', Times, serif;
@@ -316,8 +318,36 @@ video{
   background: #F2DCD3;
 }
 
+.footer-icons{
+  list-style: none;
+  margin: 0;
+  background:#E8806E;
+  display:flex;
+  flex-flow:row;
+  justify-content: center;
+}
 
-@media (min-width:550px){
+.footer-icons a{
+  display:block;
+  text-align: center;
+}
+
+footer img{
+  width: 35px;
+  padding: 5px 30px;
+}
+
+@media all and (max-width:550px){
+  .footer-nav{
+    display:none;
+  }
+}
+
+@media all and (min-width:550px){
+  .footer-icons{
+    display:none;
+  }
+
   .footer-nav{
     flex-flow:row;
     justify-content: flex-end;

@@ -121,8 +121,6 @@ body{
   }
 }
 
-
-
 @media all and (min-width:550px){
   .navigation{
     flex-flow:row;

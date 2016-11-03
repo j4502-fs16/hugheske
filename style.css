@@ -23,7 +23,107 @@ body{
   font-weight: bold;
 }
 
-@media all and (min-width:800px){
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow:
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
+.tab-group{
+  display:flex;
+  flex-flow:column;
+}
+
+.tab label{
+  background:#E8806E;
+  display:block;
+  color:#20304F;
+  font-weight: bold;
+  line-height: 2;
+  width: 17px;
+  padding-left:.5em;
+  margin-bottom:.5em;
+}
+
+.tab input:focus + label, .tab label:hover{
+  background:#F2DCD3;
+}
+
+.tab input{
+  display:none;
+}
+
+.tab-content{
+  height:0px;
+  overflow:hidden;
+  transition:height .35s ease-in-out;
+}
+
+.tab input:checked ~ .tab-content{
+  height:9em;
+}
+
+.subnav{
+  list-style:none;
+  text-align:center;
+  padding:0;
+  font-family: 'Josefin Slab', Times, serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.subnav a{
+  text-decoration:none;
+  display:block;
+  color:#20304F;
+  padding:8px;
+}
+
+.subnav li{
+  text-decoration:none;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.tab-content{
+  text-decoration:none;
+  font-size: 1em;
+  font-weight: bold;
+  display:block;
+  text-align:center;
+  background-color:#E8806E;
+}
+
+@media all and (max-width:550px){
+  .tab-group{
+    display:flex;
+    flex-flow:row;
+    justify-content:flex-start;
+  }
+
+  .tab label{
+    padding: 0 10px;
+  }
+
+  .tab label:hover ~.tab-content{
+    height:10.5em;
+  }
+}
+
+
+
+@media all and (min-width:550px){
   .navigation{
     flex-flow:row;
     justify-content: flex-end;
@@ -130,6 +230,9 @@ video{
   .footer-first{
     display:none;
   }
+  .navigation{
+    display:none;
+  }
 }
 
 @media all and (min-width:550px){
@@ -146,6 +249,9 @@ video{
   .about{
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .tab-group{
+    display:none;
   }
 }
 
@@ -208,8 +314,12 @@ video{
   font-weight: bold;
 }
 
+.footer-nav a:hover{
+  background: #F2DCD3;
+}
 
-@media (min-width:800px){
+
+@media (min-width:550px){
   .footer-nav{
     flex-flow:row;
     justify-content: flex-end;

@@ -23,7 +23,7 @@ body{
   font-weight: bold;
 }
 
-@media (min-width:800px){
+@media all and (min-width:800px){
   .navigation{
     flex-flow:row;
     justify-content: flex-end;
@@ -58,9 +58,14 @@ body{
 }
 
 .main{
-  text-align:left;
   margin-top:10px;
   padding-bottom: 5px;
+}
+
+.about{
+  padding-bottom: 30px;
+  justify-content: center;
+  align-self: center;
 }
 
 .about-me{
@@ -70,8 +75,9 @@ body{
   font-size: 1em;
   margin-top: 0px;
   text-align: left;
-  padding-bottom: 20px;
   padding:10px;
+  padding-top: 0px;
+  max-width: 1700px;
 }
 
 .wrapper{
@@ -91,34 +97,64 @@ img {
   border-style: none;
   width:100%;
   padding-bottom:30px;
+  max-width: 300px;
 }
 
-@media (min-width:800px){
-  .main{
-    flex:3 auto;
-  }
+.featuredcontent{
+  margin: 30px auto 40px auto;
+}
 
-  .header2{
-    order:1;
-  }
+.featureheader{
+  color:#20304F;
+  font-family: 'Lobster', Times, serif;
+  font-size: 2em;
+  font-weight: bold;
+  display:block;
+  background-color:#F2DCD3;
+  margin-top: 0;
+  text-align: center;
+  margin-top: 30px;
+}
 
-  .photo{
-    order:2;
-  }
+video{
+  padding-top:20px;
+  width:80%;
+  height:80%;
+  max-width: 700px;
+}
 
+@media all and (max-width: 550px){
+  .featuredcontent{
+    display:none;
+  }
+  .footer-first{
+    display:none;
+  }
+}
+
+@media all and (min-width:550px){
+  .about{
+    display:flex;
+    flex-flow:row;
+  }
   .about-me{
-    order:3;
-  }
-
-  .header2{
-    font-size: 1.8em;
+    font-size: .95em;
     justify-content: center;
     align-self: center;
+    padding-left: 15px;
   }
+  .about{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media all and (min-width:800px){
 
   .main{
     display:flex;
-    flex-flow:row;}
+    flex-flow:row;
+  }
 
   .main{
     margin-bottom: 30px;
@@ -127,20 +163,29 @@ img {
     padding-right:50px;
   }
 
+  .header2{
+    font-size: 1.8em;
+    justify-content: center;
+    align-self: center;
+  }
+
   .about-me{
     font-size: .85em;
+    padding-left: 40px;
     text-align:left;
     justify-content: center;
     align-self: center;
   }
 
   img{
-    width:290px;
+    width:100%;
+    max-width: 290px;
     padding-bottom: 0px;
-    padding-right: 15px;
+    margin-right: 15px;
     padding-left: 15px;
+    justify-content: center;
+    align-self: center;
   }
-
 }
 
 .footer-nav {
@@ -163,6 +208,7 @@ img {
   font-weight: bold;
 }
 
+
 @media (min-width:800px){
   .footer-nav{
     flex-flow:row;
@@ -171,7 +217,7 @@ img {
   .footer-nav a:hover{
     background: #F2DCD3;
   }
-  .first{
+  .footer-first{
     margin-right:auto;
   }
 }

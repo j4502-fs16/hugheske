@@ -2,9 +2,10 @@ body{
   text-align:center;
   background-color:white;
 }
+
 nav ul li {
   display:block;
-  border-top: 1px #79896d solid;
+  border-top: 1px #20304F solid;
   background:#E8806E;
 }
 
@@ -12,7 +13,6 @@ nav a{
   font-size: 1.1em;
   display:block;
   text-decoration:none;
-  padding:20px 30px;
   color:#20304F;
   font-family: 'Josefin Slab', Times, serif;
   font-weight: bold;
@@ -20,14 +20,14 @@ nav a{
 
 header {
   display: flex;
-  flex-flow;
+  flex-flow:column;
   margin:0px;
-  padding: 0 10px;
 }
 
 .menu-trigger {
     order: 1;
     color: #E8806E;
+    width: 1%;
 }
 
 header h1 {
@@ -38,16 +38,31 @@ nav ul {
     display: none;
 }
 
+@media screen and (max-width: 550px){
+  nav a{
+      padding:10px 30px;
+  }
+}
+
 @media screen and (min-width: 550px){
+
+  nav{
+  background:#E8806E;
+  }
 
     nav ul {
         display: flex;
         flex-flow: row;
         justify-content: center;
+
     }
 
     nav ul li {
         border-top: none;
+    }
+
+    nav a{
+      padding: 0px 10px;
     }
 
     nav a:hover{

@@ -199,9 +199,6 @@ video{
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .tab-group{
-    display:none;
-  }
 }
 
 @media all and (min-width:800px){

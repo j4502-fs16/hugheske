@@ -152,8 +152,11 @@ img {
   max-width: 300px;
 }
 
-.featuredcontent{
+
+.content{
   margin: 30px auto 40px auto;
+  display:flex;
+  flex-flow: row;
 }
 
 .featureheader{
@@ -169,10 +172,15 @@ img {
 }
 
 video{
+  flex: 1;
   padding-top:20px;
-  width:80%;
-  height:80%;
-  max-width: 700px;
+  width:50%;
+  max-width: 600px;
+}
+iframe{
+  flex:2;
+  padding-left: 50px;
+  width: 50%
 }
 
 @media all and (max-width: 550px){
